@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Random Password Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🔐 Random Password Generator</h1>
+    <p class="subtitle">Create ultra-secure passwords with one click</p>
+
+    <div class="generator-box">
+      <div class="password-display">
+        <span id="password">Click “Generate” to start</span>
+        <button id="copyBtn" class="btn secondary">Copy</button>
+      </div>
+
+      <div class="settings">
+        <label>Password length: <strong id="lengthVal">16</strong></label>
+        <input type="range" id="length" min="4" max="64" value="16" />
+      </div>
+
+      <div class="options">
+        <label><input type="checkbox" id="lower" checked> Lowercase (a–z)</label>
+        <label><input type="checkbox" id="upper" checked> Uppercase (A–Z)</label>
+        <label><input type="checkbox" id="numbers" checked> Numbers (0–9)</label>
+        <label><input type="checkbox" id="symbols"> Symbols (!@#$...)</label>
+        <label><input type="checkbox" id="excludeSimilar"> Exclude similar (i, l, 1, 0, O)</label>
+      </div>
+
+      <button id="generateBtn" class="btn primary">Generate Password</button>
+
+      <div class="strength-section">
+        <p>Strength: <span id="entropy">—</span> bits</p>
+        <div class="strength-bar"><i id="strengthBar"></i></div>
+      </div>
+    </div>
+
+    <footer>💡 Tip: Use a password manager to store them safely.</footer>
+    <p class="credit">Developer by Nobab</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
